@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define DELIMITER " \t\r\n\a"
+
 /*Critical Headers*/
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,9 +49,7 @@ typedef struct instruction_s
 /**created typedef*/
 
 typedef struct global_s{
-	stack_t *stack;
 	int line_number;
-	char *opcode;
 	FILE *file;
 	char *filename;
 	char *line;
@@ -58,12 +58,20 @@ typedef struct global_s{
 
 
 /*Global variables*/
-extern global_t global;
+extern global_t data;
 
 
 /* Prototypes */
+void process_file(stack_t **stack);
+int execute_command(stack_t **stack);
+void free_stack(stack_t **stack);
+void free_data(void);
+int tokenize_input(void);
+void print_stack(stack_t **stack,
+		unsigned int line_number __attribute__((unused)));
+void push_stack(stack_t **stack,
+		unsigned int line_number __attribute__((unused)));
 
 
 
-
-#endif/* Monty header */
+#endif /* MONTY_H */
