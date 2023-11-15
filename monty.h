@@ -1,7 +1,7 @@
+#define _GNU_SOURCE
 #ifndef MONTY_H
 #define MONTY_H
-
-#define DELIMITER " \t\r\n\a"
+#define DELIMITER " \n\t\r\a"
 
 /*Critical Headers*/
 #include <stdio.h>
