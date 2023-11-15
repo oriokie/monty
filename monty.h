@@ -83,7 +83,7 @@ void print_stack(stack_t **stack,
 		unsigned int line_number __attribute__((unused)));
 void push_stack(stack_t **stack,
 		unsigned int line_number __attribute__((unused)));
-
+void do_nothing(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */

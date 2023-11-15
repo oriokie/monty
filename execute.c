@@ -38,6 +38,7 @@ int execute_command(stack_t **stack)
 	instruction_t cmd[] = {
 		{"push", push_stack},
 		{"pall", print_stack},
+		{"nop", do_nothing},
 		{NULL, NULL}
 	};
 
