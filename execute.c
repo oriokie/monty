@@ -13,7 +13,7 @@ void process_file(stack_t **stack)
 	while((read_line = getline(&data.line, &line_len, data.file)) != -1)
 	{
 		/* Skip empty lines */
-		if (data.line == '\n')
+		if (*data.line == '\n')
 			continue;
 		/* Skip comments */
 		if (data.line[0] == '#')
