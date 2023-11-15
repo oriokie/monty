@@ -1,6 +1,6 @@
-#define _GNU_SOURCE
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 #define DELIMITER " \n\t\r\a"
 
 /*Critical Headers*/
@@ -26,9 +26,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -41,21 +41,33 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-		char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 
 /**created typedef*/
 
-typedef struct global_s{
+/**
+ * struct global_s - global variables
+ * @line_number: the line number
+ * @file: the file
+ * @filename: the file name
+ * @line: the line
+ * @args: the arguments
+ *
+ * Description: global variables
+ * for stack, queues, LIFO, FIFO
+*/
+
+typedef struct global_s
+{
 	int line_number;
 	FILE *file;
 	char *filename;
 	char *line;
 	char **args;
 } global_t;
-
 
 /*Global variables*/
 extern global_t data;

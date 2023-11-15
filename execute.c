@@ -10,7 +10,7 @@ void process_file(stack_t **stack)
 	ssize_t read_line = 1;
 	size_t line_len = 0;
 
-	while((read_line = getline(&data.line, &line_len, data.file)) > 0)
+	while ((read_line = getline(&data.line, &line_len, data.file)) > 0)
 	{
 		/* Skip empty lines */
 		if (*data.line == '\n')
@@ -19,7 +19,6 @@ void process_file(stack_t **stack)
 		if (data.line[0] == '#')
 			continue;
 		data.line_number++; /* Increment line number */
-		
 		free(data.args); /*free args from previous assignment*/
 		if (tokenize_input() < 0) /*splitting line into args*/
 			continue;
@@ -36,7 +35,7 @@ void process_file(stack_t **stack)
 */
 int execute_command(stack_t **stack)
 {
-	instruction_t cmd [] = {
+	instruction_t cmd[] = {
 		{"push", push_stack},
 		{"pall", print_stack},
 		{NULL, NULL}
@@ -53,6 +52,7 @@ int execute_command(stack_t **stack)
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", data.line_number, data.args[0]);
+	fprintf(stderr, "L%d: unknown instruction %s\n",
+			data.line_number, data.args[0]);
 	return (1);
 }

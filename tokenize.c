@@ -9,7 +9,7 @@ int tokenize_input(void)
 	char *token;
 	size_t i = 0;
 	size_t size = strlen(data.line) + 1;
-	
+
 	data.args = malloc(sizeof(char *) * size);
 	if (data.args == NULL)
 	{

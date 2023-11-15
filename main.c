@@ -1,6 +1,6 @@
 #include "monty.h"
 
-global_t data;
+global_t data = {0, NULL, NULL, NULL, NULL};
 
 /**
  * main - Entry point
@@ -11,8 +11,7 @@ global_t data;
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
-
-	memset((void *) &data, 0, sizeof(data));
+	
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
