@@ -10,9 +10,9 @@ global_t data;
 */
 int main(int argc, char *argv[])
 {
-	global_t data = {0, NULL, NULL, NULL, NULL};
 	stack_t *stack = NULL;
 
+	memset((void *) &data, 0, sizeof(data));
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		data.filename = argv[1];
-		data.file = fopen(argv[1], "r");
+		data.file = fopen(data.filename, "r");
 		if (data.file == NULL)
 		{
 			fprintf(stderr, "Error: Can't open file %s\n", data.filename);

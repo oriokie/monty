@@ -10,7 +10,7 @@ void process_file(stack_t **stack)
 	ssize_t read_line = 1;
 	size_t line_len = 0;
 
-	while((read_line = getline(&data.line, &line_len, data.file)) != -1)
+	while((read_line = getline(&data.line, &line_len, data.file)) > 0)
 	{
 		/* Skip empty lines */
 		if (*data.line == '\n')

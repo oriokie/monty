@@ -1,11 +1,9 @@
-push 1$
-push 2$
-push 3$
-push 4$
-push 5$
-push 6$
-push 7$
-push 8$
-push 9$
-push 10$
-pall$
+push 0 hola
+push 1 estudiante
+push 2 de
+push 3 holberton
+pall    
+push 4
+push 5    
+       push    6        
+pall
