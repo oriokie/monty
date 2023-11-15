@@ -11,7 +11,7 @@ global_t data = {0, NULL, NULL, NULL, NULL};
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
-	
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
