@@ -48,6 +48,7 @@ int execute_command(stack_t **stack)
 		{"mul", mul_toptwo},
 		{"mod", mod_toptwo},
 		{"pchar", pchar_top},
+		{"pstr", print_char},
 		{NULL, NULL}
 	};
 
