@@ -41,6 +41,7 @@ int execute_command(stack_t **stack)
 		{"nop", do_nothing},
 		{"pint", print_topstack},
 		{"pop", pop_top},
+		{"swap", swap_toptwo},
 		{NULL, NULL}
 	};
 

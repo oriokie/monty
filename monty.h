@@ -88,6 +88,8 @@ void print_topstack(stack_t **stack,
 		unsigned int line_number __attribute__((unused)));
 void pop_top(stack_t **stack,
 	unsigned int line_number __attribute__((unused)));
+void swap_toptwo(stack_t **stack,
+	unsigned int line_number __attribute__((unused)));
 
 
 #endif/* MONTY_H */
