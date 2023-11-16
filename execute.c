@@ -57,5 +57,6 @@ int execute_command(stack_t **stack)
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n",
 			data.line_number, data.args[0]);
+	free_data();
 	return (1);
 }
