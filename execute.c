@@ -43,7 +43,7 @@ int execute_command(stack_t **stack)
 		{"pop", pop_top},
 		{"swap", swap_toptwo},
 		{"add", add_toptwo},
-        {"sub", sub_toptwo},
+		{"sub", sub_toptwo},
 		{"div", div_toptwo},
 		{"mul", mul_toptwo},
 		{"mod", mod_toptwo},

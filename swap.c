@@ -2,7 +2,7 @@
 /**
  * swap_toptwo - swaps the top two elements of the stack
  * @stack: the pointer to the stack
- * 	@line_number: the line number
+ * @line_number: the line number
  * Return: void
 */
 void swap_toptwo(stack_t **stack,
