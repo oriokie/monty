@@ -40,6 +40,7 @@ int execute_command(stack_t **stack)
 		{"pall", print_stack},
 		{"nop", do_nothing},
 		{"pint", print_topstack},
+		{"pop", pop_top},
 		{NULL, NULL}
 	};
 
