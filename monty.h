@@ -92,5 +92,7 @@ void swap_toptwo(stack_t **stack,
 	unsigned int line_number __attribute__((unused)));
 void add_toptwo(stack_t **stack, unsigned int line_number);
 void sub_toptwo(stack_t **stack, unsigned int line_number);
+void div_toptwo(stack_t **stack,
+	unsigned int line_number __attribute__((unused)));
 
 #endif/* MONTY_H */

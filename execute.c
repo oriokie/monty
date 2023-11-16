@@ -44,6 +44,7 @@ int execute_command(stack_t **stack)
 		{"swap", swap_toptwo},
 		{"add", add_toptwo},
         {"sub", sub_toptwo},
+		{"div", div_toptwo},
 		{NULL, NULL}
 	};
 
