@@ -8,5 +8,4 @@ void do_nothing(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
 	(void)line_number;
-    free_stack(stack);
 }
