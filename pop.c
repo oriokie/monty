@@ -13,6 +13,7 @@ void pop_top(stack_t **stack,
 	if (!*stack)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		free_data();
 		exit(EXIT_FAILURE);
 	}
 
