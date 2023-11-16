@@ -19,7 +19,7 @@ void push_stack(stack_t **stack, unsigned int line_number
 	if (data.args[1] == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", data.line_number);
-		free_data();
+		free_data(), free(new_node);
 		exit(EXIT_FAILURE);
 	}
 	if (isdigit(data.args[1][0]) == 0)
