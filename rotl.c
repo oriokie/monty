@@ -10,6 +10,9 @@ void rotate1(stack_t **stack,
 {
 	stack_t *first, *second, *last;
 
+	if (*stack == NULL || (*stack)->next == NULL)
+		return;
+
 	first = *stack;
 	second = first->next;
 	last = first;
