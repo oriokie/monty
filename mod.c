@@ -19,6 +19,12 @@ void mod_toptwo(stack_t **stack,
 		free_data();
 		exit(EXIT_FAILURE);
 	}
+	if (temp->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", data.line_number);
+		free_data(), free_stack(stack);
+		exit(EXIT_FAILURE);
+	}
 
 	first = (*stack)->n;
 	second = (*stack)->next->n;
