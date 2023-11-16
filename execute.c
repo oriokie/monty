@@ -46,6 +46,7 @@ int execute_command(stack_t **stack)
         {"sub", sub_toptwo},
 		{"div", div_toptwo},
 		{"mul", mul_toptwo},
+		{"mod", mod_toptwo},
 		{NULL, NULL}
 	};
 
