@@ -102,5 +102,9 @@ void pchar_top(stack_t **stack,
 		unsigned int line_number __attribute__((unused)));
 void print_char(stack_t **stack,
 		unsigned int line_number __attribute__((unused)));
+void rotate1(stack_t **stack,
+		unsigned int line_number __attribute__((unused)));
+void rotate2(stack_t **stack,
+		unsigned int line_number __attribute__((unused)));
 
 #endif/* MONTY_H */

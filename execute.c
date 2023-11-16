@@ -49,6 +49,8 @@ int execute_command(stack_t **stack)
 		{"mod", mod_toptwo},
 		{"pchar", pchar_top},
 		{"pstr", print_char},
+		{"rotl", rotate1},
+		{"rotr", rotate2},
 		{NULL, NULL}
 	};
 
