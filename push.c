@@ -16,6 +16,12 @@ void push_stack(stack_t **stack, unsigned int line_number
 		free_data();
 		exit(EXIT_FAILURE);
 	}
+	if (data.args[1] == NULL)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", data.line_number);
+		free_data();
+		exit(EXIT_FAILURE);
+	}
 	if (isdigit(data.args[1][0]) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", data.line_number);
