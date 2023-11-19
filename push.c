@@ -14,7 +14,6 @@ void push_stack(stack_t **stack, unsigned int line_number
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		free_data();
 		exit(EXIT_FAILURE);
 	}
 	if (data.args[1] == NULL)
@@ -25,11 +24,15 @@ void push_stack(stack_t **stack, unsigned int line_number
 	}
 	if (data.args[1][i] == '-')
 		i++;
-	if (isdigit(data.args[1][i]) == 0)
+	while (data.args[1][i] != '\0')
 	{
+		if (isdigit(data.args[1][i]) == 0)
+		{
 		fprintf(stderr, "L%d: usage: push integer\n", data.line_number);
 		free_data(), free(new_node);
 		exit(EXIT_FAILURE);
+		}
+		i++;
 	}
 	new_node->n = atoi(data.args[1]);
 	if (*stack == NULL)
