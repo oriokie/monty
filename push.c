@@ -9,6 +9,7 @@ void push_stack(stack_t **stack, unsigned int line_number
 								__attribute__((unused)))
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
+	int i = 0;
 
 	if (new_node == NULL)
 	{
@@ -22,7 +23,9 @@ void push_stack(stack_t **stack, unsigned int line_number
 		free_data(), free(new_node);
 		exit(EXIT_FAILURE);
 	}
-	if (isdigit(data.args[1][0]) == 0)
+	if (data.args[1][i] == '-')
+		i++;
+	if (isdigit(data.args[1][i]) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", data.line_number);
 		free_data(), free(new_node);
