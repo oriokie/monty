@@ -12,13 +12,13 @@ void process_file(stack_t **stack)
 
 	while ((read_line = getline(&data.line, &line_len, data.file)) > 0)
 	{
+		data.line_number++; /* Increment line number */
 		/* Skip empty lines */
 		if (*data.line == '\n')
 			continue;
 		/* Skip comments */
 		if (data.line[0] == '#')
 			continue;
-		data.line_number++; /* Increment line number */
 		free(data.args); /*free args from previous assignment*/
 		if (tokenize_input() < 0) /*splitting line into args*/
 			continue;
